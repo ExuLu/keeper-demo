@@ -4,16 +4,16 @@ import AddIcon from '@mui/icons-material/Add';
 import Zoom from '@mui/material/Zoom';
 
 function CreateArea(props) {
-  const [titleInput, setTitleInput] = useState('');
-  const [contentInput, setContentInput] = useState('');
+  const [title, setTitle] = useState('');
+  const [content, setContent] = useState('');
 
   const [titleClicked, setTitleClicked] = useState(false);
 
   function handleButtonClick(e) {
     e.preventDefault();
-    props.onClick({ title: titleInput, content: contentInput });
-    setTitleInput('');
-    setContentInput('');
+    props.onClick({ title, content });
+    setTitle('');
+    setContent('');
   }
 
   return (
@@ -21,16 +21,16 @@ function CreateArea(props) {
       <form className='create-note'>
         <input
           onClick={() => setTitleClicked(true)}
-          onChange={(e) => setTitleInput(e.target.value)}
-          value={titleInput}
+          onChange={(e) => setTitle(e.target.value)}
+          value={title}
           name='title'
           placeholder='Title'
         />
 
         {titleClicked && (
           <textarea
-            onChange={(e) => setContentInput(e.target.value)}
-            value={contentInput}
+            onChange={(e) => setContent(e.target.value)}
+            value={content}
             name='content'
             placeholder='Take a note...'
           />

@@ -3,6 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Note from './Note';
 import CreateArea from './CreateArea';
+import uniqid from 'uniqid';
 
 function App() {
   const [notes, setNotes] = useState([]);
@@ -19,7 +20,7 @@ function App() {
       <CreateArea onClick={addNote} />
       {notes.map((note, index) => (
         <Note
-          key={index}
+          key={uniqid()}
           id={index}
           title={note.title}
           content={note.content}
