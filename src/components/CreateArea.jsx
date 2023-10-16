@@ -11,6 +11,7 @@ function CreateArea(props) {
   });
   const [titleClicked, setTitleClicked] = useState(false);
 
+  // Add arrow function
   function handleChange(e) {
     const { name, value } = e.target;
     setInputText((prevNote) => ({
