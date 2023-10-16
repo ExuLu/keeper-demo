@@ -5,12 +5,20 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "@adobe/react-spectrum": "^3.31.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.13",
+    "@mui/material": "^5.14.13",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-scripts": "^5.0.1"
   },
   "devDependencies": {
-    "typescript": "5.2.2"
+    "typescript": "5.0.2"
+  },
+  "overrides": {
+    "typescript": "5.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
