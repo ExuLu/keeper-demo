@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
 
 function CreateArea(props) {
-  const [inputText, setInputText] = useState({});
+  // Change to two different changes
+  const [inputText, setInputText] = useState({
+    title: '',
+    content: '',
+  });
+  const [titleClicked, setTitleClicked] = useState(false);
+
+  // change to arrow function
   function handleChange(e) {
     const { name, value } = e.target;
     setInputText((prevNote) => ({
@@ -19,12 +26,15 @@ function CreateArea(props) {
     <div>
       <form>
         <input
-          onChange={handleChange}
+          onClick={handleTitleClick}
+          // Add arrow function
+          onChange={handleChange} 
           value={inputText.title}
           name='title'
           placeholder='Title'
         />
         <textarea
+          // Add arrow function
           onChange={handleChange}
           value={inputText.content}
           name='content'
