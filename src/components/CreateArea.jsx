@@ -3,17 +3,21 @@ import { Fab } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import Zoom from '@mui/material/Zoom';
 
-function CreateArea(props) {
+// Add pretier for project, add ESLint
+
+function CreateArea({ onClick }) {
+  //destructure object props
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
 
   const [titleClicked, setTitleClicked] = useState(false);
 
-  function handleButtonClick(e) {
+  function createNote(e) {
     e.preventDefault();
     props.onClick({ title, content });
     setTitle('');
     setContent('');
+    setTitleClicked(false);
   }
 
   return (
@@ -37,7 +41,7 @@ function CreateArea(props) {
         )}
 
         <Zoom in={titleClicked && true}>
-          <Fab onClick={handleButtonClick}>
+          <Fab onClick={createNote}>
             <AddIcon />
           </Fab>
         </Zoom>

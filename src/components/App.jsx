@@ -7,8 +7,11 @@ import uniqid from 'uniqid';
 
 function App() {
   const [notes, setNotes] = useState([]);
+  const [key, setKey] = useState(1);
+  
   function addNote(inputText) {
-    setNotes([...notes, inputText]);
+    setNotes([...notes, { ...inputText, key }]);
+    setKey((key) => key + 1);
   }
   function deleteNote(id) {
     setNotes((prevNotes) => prevNotes.filter((note, index) => index !== id));
@@ -20,7 +23,7 @@ function App() {
       <CreateArea onClick={addNote} />
       {notes.map((note, index) => (
         <Note
-          key={uniqid()}
+          key={note.key}
           id={index}
           title={note.title}
           content={note.content}
