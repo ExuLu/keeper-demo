@@ -6,7 +6,7 @@ import Zoom from '@mui/material/Zoom';
 // Add pretier for project, add ESLint
 
 function CreateArea({ onClick }) {
-  //destructure object props
+
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
 
@@ -14,7 +14,7 @@ function CreateArea({ onClick }) {
 
   function createNote(e) {
     e.preventDefault();
-    props.onClick({ title, content });
+    onClick({ title, content });
     setTitle('');
     setContent('');
     setTitleClicked(false);
