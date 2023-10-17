@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
-import {Fab} from '@mui/material';
+import React, { useState } from 'react';
+import { Fab } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import Zoom from '@mui/material/Zoom';
 
-function CreateArea({onClick}) {
+function CreateArea({ onClick }) {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
 
@@ -11,7 +11,7 @@ function CreateArea({onClick}) {
 
   function createNote(e) {
     e.preventDefault();
-    onClick({title, content});
+    onClick({ title, content });
     setTitle('');
     setContent('');
     setTitleClicked(false);

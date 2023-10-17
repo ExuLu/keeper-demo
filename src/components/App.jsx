@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Note from './Note';
@@ -9,11 +9,11 @@ function App() {
   const [key, setKey] = useState(1);
 
   function addNote(inputText) {
-    setNotes([...notes, {...inputText, key}]);
-    setKey(key => key + 1);
+    setNotes([...notes, { ...inputText, key }]);
+    setKey((k) => k + 1);
   }
   function deleteNote(id) {
-    setNotes(prevNotes => prevNotes.filter((note, index) => index !== id));
+    setNotes((prevNotes) => prevNotes.filter((note, index) => index !== id));
   }
 
   return (

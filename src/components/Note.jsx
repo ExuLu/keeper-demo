@@ -1,7 +1,7 @@
 import React from 'react';
 import DeleteIcon from '@mui/icons-material/Delete';
 
-function Note({onClick, id, title, content}) {
+function Note({ onClick, id, title, content }) {
   function deleteNote() {
     onClick(id);
   }
