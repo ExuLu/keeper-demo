@@ -16,6 +16,7 @@
     "uniqid": "^5.4.0"
   },
   "devDependencies": {
+    "prettier": "3.0.3",
     "typescript": "5.0.2"
   },
   "overrides": {
