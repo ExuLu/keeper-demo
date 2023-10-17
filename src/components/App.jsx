@@ -3,7 +3,6 @@ import Header from './Header';
 import Footer from './Footer';
 import Note from './Note';
 import CreateArea from './CreateArea';
-import uniqid from 'uniqid';
 
 function App() {
   const [notes, setNotes] = useState([]);
