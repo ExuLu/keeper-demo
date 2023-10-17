@@ -1,16 +1,16 @@
 import React from 'react';
 import DeleteIcon from '@mui/icons-material/Delete';
 
-function Note(props) {
-  function handleClick() {
-    props.onClick(props.id);
+function Note({ onClick, id, title, content }) {
+  function deleteNote() {
+    onClick(id);
   }
 
   return (
-    <div className='note' id={props.id}>
-      <h1>{props.title}</h1>
-      <p>{props.content}</p>
-      <button onClick={handleClick}>
+    <div className='note' id={id}>
+      <h1>{title}</h1>
+      <p>{content}</p>
+      <button onClick={deleteNote}>
         <DeleteIcon />
       </button>
     </div>
