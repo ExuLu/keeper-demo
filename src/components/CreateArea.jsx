@@ -3,8 +3,6 @@ import {Fab} from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import Zoom from '@mui/material/Zoom';
 
-// Add pretier for project, add ESLint
-
 function CreateArea({onClick}) {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
