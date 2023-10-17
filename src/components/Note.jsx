@@ -1,13 +1,16 @@
-import React from "react";
-import DeleteIcon from "@mui/icons-material/Delete";
+import React from 'react';
+import DeleteIcon from '@mui/icons-material/Delete';
 
-function Note({ onClick, id, title, content }) {
+function Note({onClick, id, title, content}) {
   function deleteNote() {
     onClick(id);
   }
 
   return (
-    <div className="note" id={id}>
+    <div
+      className="note"
+      id={id}
+    >
       <h1>{title}</h1>
       <p>{content}</p>
       <button onClick={deleteNote}>
