@@ -1,12 +1,9 @@
-import React, { useState } from 'react';
-import { Fab } from '@mui/material';
+import React, {useState} from 'react';
+import {Fab} from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import Zoom from '@mui/material/Zoom';
 
-// Add pretier for project, add ESLint
-
-function CreateArea({ onClick }) {
-
+function CreateArea({onClick}) {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
 
@@ -14,7 +11,7 @@ function CreateArea({ onClick }) {
 
   function createNote(e) {
     e.preventDefault();
-    onClick({ title, content });
+    onClick({title, content});
     setTitle('');
     setContent('');
     setTitleClicked(false);
@@ -22,21 +19,21 @@ function CreateArea({ onClick }) {
 
   return (
     <div>
-      <form className='create-note'>
+      <form className="create-note">
         <input
           onClick={() => setTitleClicked(true)}
-          onChange={(e) => setTitle(e.target.value)}
+          onChange={e => setTitle(e.target.value)}
           value={title}
-          name='title'
-          placeholder='Title'
+          name="title"
+          placeholder="Title"
         />
 
         {titleClicked && (
           <textarea
-            onChange={(e) => setContent(e.target.value)}
+            onChange={e => setContent(e.target.value)}
             value={content}
-            name='content'
-            placeholder='Take a note...'
+            name="content"
+            placeholder="Take a note..."
           />
         )}
 
