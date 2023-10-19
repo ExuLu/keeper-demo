@@ -20,14 +20,6 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    // 'react/jsx-no-bind': [
-    //   {
-    //     ignoreDOMComponents: false,
-    //     ignoreRefs: false,
-    //     allowArrowFunctions: false,
-    //     allowFunctions: false,
-    //     allowBind: false,
-    //   },
-    // ],
+    // curly: 'error',
   },
 };

@@ -1,5 +1,6 @@
+/* eslint-disable react/jsx-no-bind */
 import React, { useState } from 'react';
-import { Fab } from '@mui/material';
+import { PropTypes, Fab } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import Zoom from '@mui/material/Zoom';
 
@@ -22,7 +23,7 @@ function CreateArea({ onClick }) {
       <form className="create-note">
         <input
           onClick={() => setTitleClicked(true)}
-          onChange={e => setTitle(e.target.value)}
+          onChange={(e) => setTitle(e.target.value)}
           value={title}
           name="title"
           placeholder="Title"
@@ -30,7 +31,7 @@ function CreateArea({ onClick }) {
 
         {titleClicked && (
           <textarea
-            onChange={e => setContent(e.target.value)}
+            onChange={(e) => setContent(e.target.value)}
             value={content}
             name="content"
             placeholder="Take a note..."
@@ -47,4 +48,7 @@ function CreateArea({ onClick }) {
   );
 }
 
+CreateArea.propTypes = {
+  onClick: PropTypes.function.isRequired,
+};
 export default CreateArea;
