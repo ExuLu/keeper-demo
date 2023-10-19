@@ -5,6 +5,8 @@ import Footer from './Footer';
 import Note from './Note';
 import CreateArea from './CreateArea';
 
+// prettier-ignore
+
 function App() {
   const [notes, setNotes] = useState([]);
   const [key, setKey] = useState(1);
