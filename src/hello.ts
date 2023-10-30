@@ -1,5 +1,5 @@
-function greet(person, date) {
-  console.log(`Hello, ${person}, today is ${date}`);
+function greet(person: String, date: Date) {
+  console.log(`Hello, ${person}, today is ${date.toDateString()}`);
 }
 
-greet('Alena', '30th of October');
+greet('Alena', new Date());
